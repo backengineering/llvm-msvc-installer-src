@@ -1,2 +1,2 @@
 # llvm-msvc-installer
- The Source of llvm-msvc-installer
+ The source of llvm-msvc-installer
