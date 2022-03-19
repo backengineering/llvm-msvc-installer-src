@@ -67,12 +67,12 @@ ECHO VCTargetsPath for Visual Studio 2015: %VCT_PATH%
 XCOPY /Q /Y "LLVM-MSVC" "%VCT_PATH%\..\LLVM-MSVC\"
 XCOPY /Q /Y "LLVM-MSVC_v140" "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140\"
 XCOPY /Q /Y "LLVM-MSVC_v140_xp" "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140_xp\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\x64\PlatformToolsets\LLVM-MSVC_v140_KernelMode\"
+XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140_KernelMode\"
 XCOPY /Q /Y "LLVM-MSVC_v140" "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140\"
 XCOPY /Q /Y "LLVM-MSVC_v140_xp" "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140_xp\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v140_KernelMode\"
+XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140_KernelMode\"
 SET SUCCESS=1
-
+EXIT /B
 
 :SUB_VS2017
 ECHO VCTargetsPath for Visual Studio 2017: %~1
@@ -83,10 +83,10 @@ XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\x64\PlatformToolsets\LLVM-MSVC_v141_Kern
 XCOPY /Q /Y "LLVM-MSVC_v141" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v141\"
 XCOPY /Q /Y "LLVM-MSVC_v141_xp" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v141_xp\"
 XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v141_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v141" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v141\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v141_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v141" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v141\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v141_KernelMode\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_v141" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v141\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v141_KernelMode\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_v141" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v141\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v141_KernelMode\"
 SET SUCCESS=1
 EXIT /B
 
@@ -97,12 +97,11 @@ XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\x64\PlatformToolsets\LLVM-MSVC_v142\"
 XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\x64\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
 XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v142\"
 XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_v142" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142_KernelMode\"
 SET SUCCESS=1
-XCOPY /Q /Y "ProjectTemplates" "%USERPROFILE%\Documents\Visual Studio 2019\Templates\ProjectTemplates\"
 EXIT /B
 
 :SUB_VS2022
@@ -112,9 +111,9 @@ XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\x64\PlatformToolsets\LLVM-MSVC_v143\"
 XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\x64\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
 XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v143\"
 XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\Win32\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
-XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143\"
-XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143\"
+IF EXIST "%~1\ARM64" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_v143" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143\"
+IF EXIST "%~1\ARM" XCOPY /Q /Y "LLVM-MSVC_KernelMode" "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143_KernelMode\"
 SET SUCCESS=1
 EXIT /B

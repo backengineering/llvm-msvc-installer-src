@@ -64,15 +64,15 @@ EXIT /B
 
 :SUB_VS2015
 ECHO VCTargetsPath for Visual Studio 2015: %VCT_PATH%
-rd /s/q "%~1\..\LLVM-MSVC"
-rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v140"
-rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v140_KernelMode"
-rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v140_xp"
-rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v140"
-rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v140_KernelMode"
-rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v140_xp"
+rd /s/q "%VCT_PATH%\..\LLVM-MSVC"
+rd /s/q "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140"
+rd /s/q "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140_KernelMode"
+rd /s/q "%VCT_PATH%\x64\PlatformToolsets\LLVM-MSVC_v140_xp"
+rd /s/q "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140"
+rd /s/q "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140_KernelMode"
+rd /s/q "%VCT_PATH%\Win32\PlatformToolsets\LLVM-MSVC_v140_xp"
 SET SUCCESS=1
-
+EXIT /B
 
 :SUB_VS2017
 ECHO VCTargetsPath for Visual Studio 2017: %~1
@@ -94,9 +94,13 @@ EXIT /B
 ECHO VCTargetsPath for Visual Studio 2019: %~1
 rd /s/q "%~1\..\LLVM-MSVC"
 rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v142"
+rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v142_KernelMode"
 rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v142"
+rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v142_KernelMode"
 rd /s/q "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142"
+rd /s/q "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v142_KernelMode"
 rd /s/q "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142"
+rd /s/q "%~1\ARM\PlatformToolsets\LLVM-MSVC_v142_KernelMode"
 SET SUCCESS=1
 EXIT /B
 
@@ -104,8 +108,12 @@ EXIT /B
 ECHO VCTargetsPath for Visual Studio 2022: %~1
 rd /s/q "%~1\..\LLVM-MSVC"
 rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v143"
+rd /s/q "%~1\x64\PlatformToolsets\LLVM-MSVC_v143_KernelMode"
 rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v143"
+rd /s/q "%~1\Win32\PlatformToolsets\LLVM-MSVC_v143_KernelMode"
 rd /s/q "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143"
+rd /s/q "%~1\ARM64\PlatformToolsets\LLVM-MSVC_v143_KernelMode"
 rd /s/q "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143"
+rd /s/q "%~1\ARM\PlatformToolsets\LLVM-MSVC_v143_KernelMode"
 SET SUCCESS=1
 EXIT /B
