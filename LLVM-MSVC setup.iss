@@ -17,7 +17,7 @@ DisableStartupPrompt=yes
 DisableFinishedPage=yes
 Uninstallable=yes
 OutputDir=Output\
-OutputBaseFilename=llvm-msvc_X86_64
+OutputBaseFilename=llvm-msvc_X86_64_installer
 PrivilegesRequired=admin
 
 
