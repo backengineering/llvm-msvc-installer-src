@@ -232,6 +232,7 @@
 
 /* Features in %ebx for leaf 0x80000008 */
 #define bit_CLZERO      0x00000001
+#define bit_RDPRU       0x00000010
 #define bit_WBNOINVD    0x00000200
 
 
@@ -260,7 +261,8 @@
         : "0"(__leaf), "2"(__count))
 #endif
 
-static __inline int __get_cpuid_max (unsigned int __leaf, unsigned int *__sig)
+static __inline unsigned int __get_cpuid_max (unsigned int __leaf,
+                                              unsigned int *__sig)
 {
     unsigned int __eax, __ebx, __ecx, __edx;
 #if __i386__
