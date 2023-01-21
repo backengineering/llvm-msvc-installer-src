@@ -51193,11 +51193,6 @@ __ai float64x2_t vmulq_n_f64(float64x2_t __p0, float64_t __p1) {
 }
 #endif
 
-__ai poly128_t vmull_p64(poly64_t __p0, poly64_t __p1) {
-  poly128_t __ret;
-  __ret = (poly128_t) __builtin_neon_vmull_p64(__p0, __p1);
-  return __ret;
-}
 #ifdef __LITTLE_ENDIAN__
 __ai poly16x8_t vmull_high_p8(poly8x16_t __p0, poly8x16_t __p1) {
   poly16x8_t __ret;
@@ -51313,22 +51308,6 @@ __ai int32x4_t vmull_high_s16(int16x8_t __p0, int16x8_t __p1) {
   int16x8_t __rev1;  __rev1 = __builtin_shufflevector(__p1, __p1, 7, 6, 5, 4, 3, 2, 1, 0);
   __ret = __noswap_vmull_s16(__noswap_vget_high_s16(__rev0), __noswap_vget_high_s16(__rev1));
   __ret = __builtin_shufflevector(__ret, __ret, 3, 2, 1, 0);
-  return __ret;
-}
-#endif
-
-#ifdef __LITTLE_ENDIAN__
-__ai poly128_t vmull_high_p64(poly64x2_t __p0, poly64x2_t __p1) {
-  poly128_t __ret;
-  __ret = vmull_p64((poly64_t)(vget_high_p64(__p0)), (poly64_t)(vget_high_p64(__p1)));
-  return __ret;
-}
-#else
-__ai poly128_t vmull_high_p64(poly64x2_t __p0, poly64x2_t __p1) {
-  poly128_t __ret;
-  poly64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
-  poly64x2_t __rev1;  __rev1 = __builtin_shufflevector(__p1, __p1, 1, 0);
-  __ret = vmull_p64((poly64_t)(__noswap_vget_high_p64(__rev0)), (poly64_t)(__noswap_vget_high_p64(__rev1)));
   return __ret;
 }
 #endif
@@ -62835,6 +62814,27 @@ __ai int16x4_t vzip2_s16(int16x4_t __p0, int16x4_t __p1) {
   int16x4_t __rev1;  __rev1 = __builtin_shufflevector(__p1, __p1, 3, 2, 1, 0);
   __ret = __builtin_shufflevector(__rev0, __rev1, 2, 6, 3, 7);
   __ret = __builtin_shufflevector(__ret, __ret, 3, 2, 1, 0);
+  return __ret;
+}
+#endif
+
+__ai __attribute__((target("aes"))) poly128_t vmull_p64(poly64_t __p0, poly64_t __p1) {
+  poly128_t __ret;
+  __ret = (poly128_t) __builtin_neon_vmull_p64(__p0, __p1);
+  return __ret;
+}
+#ifdef __LITTLE_ENDIAN__
+__ai __attribute__((target("aes"))) poly128_t vmull_high_p64(poly64x2_t __p0, poly64x2_t __p1) {
+  poly128_t __ret;
+  __ret = vmull_p64((poly64_t)(vget_high_p64(__p0)), (poly64_t)(vget_high_p64(__p1)));
+  return __ret;
+}
+#else
+__ai __attribute__((target("aes"))) poly128_t vmull_high_p64(poly64x2_t __p0, poly64x2_t __p1) {
+  poly128_t __ret;
+  poly64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
+  poly64x2_t __rev1;  __rev1 = __builtin_shufflevector(__p1, __p1, 1, 0);
+  __ret = vmull_p64((poly64_t)(__noswap_vget_high_p64(__rev0)), (poly64_t)(__noswap_vget_high_p64(__rev1)));
   return __ret;
 }
 #endif
