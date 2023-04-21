@@ -14,8 +14,6 @@
     <UseClangCl>true</UseClangCl>
     <UseLldLink>true</UseLldLink>
 
-    <IncludePath>$(LLVMInstallDir)lib\sdk;$(IncludePath)</IncludePath>
-
   </PropertyGroup>
 <Import Project="$(MSBuildThisFileDirectory)ImportAfter\*.props" Condition="Exists('$(MSBuildThisFileDirectory)ImportAfter')" />
 </Project>
