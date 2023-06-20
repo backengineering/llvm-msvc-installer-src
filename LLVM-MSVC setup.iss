@@ -49,9 +49,6 @@ Source: "LLVM-MSVC_KernelMode\*"; DestDir: "{app}\template\LLVM-MSVC_KernelMode"
 
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"
-Name: "tc"; MessagesFile: "compiler:Languages\ChineseTraditional.isl"
-Name: "jp"; MessagesFile: "compiler:Languages\Japanese.isl"
-Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 
 [Registry]
  Root: HKLM; Subkey: "SOFTWARE\LLVM\LLVM-MSVC"; ValueType: "string"; ValueData: "{app}"
