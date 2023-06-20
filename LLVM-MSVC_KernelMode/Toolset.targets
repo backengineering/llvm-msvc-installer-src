@@ -9,7 +9,6 @@
     <LLVMInstallDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\LLVM\LLVM-MSVC)</LLVMInstallDir>
     <LLVMInstallDir Condition="'$(LLVMInstallDir)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LLVM\LLVM-MSVC)</LLVMInstallDir>
     <LLVMInstallDir Condition="'$(LLVMInstallDir)' != ''">$(LLVMInstallDir)\</LLVMInstallDir>
-    <IncludePath>$(LLVMInstallDir)lib\sdk;$(IncludePath)</IncludePath>
   </PropertyGroup>
   
   <Import Project="$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\WindowsKernelModeDriver10.0\Toolset.targets"/>
