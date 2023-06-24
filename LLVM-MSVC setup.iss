@@ -19,7 +19,7 @@ Uninstallable=yes
 OutputDir=Output\
 OutputBaseFilename=llvm-msvc_X86_64_installer
 PrivilegesRequired=admin
-
+SetupIconFile = NewWorld2.ico
 
 
 [Files]
