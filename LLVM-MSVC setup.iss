@@ -30,9 +30,6 @@ Source: "bin\*.*"; DestDir: "{app}\bin\"; Flags: ignoreversion
 ;lib
 Source: "lib\*"; DestDir: "{app}\lib"; Flags: ignoreversion recursesubdirs
 
-;doc
-Source: "doc\*"; DestDir: "{app}\doc"; Flags: ignoreversion recursesubdirs
-
 
 
 ;template
@@ -67,7 +64,6 @@ begin
 
     DelTree(ExpandConstant('{app}\bin'), True, True, True);
     DelTree(ExpandConstant('{app}\lib'), True, True, True);
-    DelTree(ExpandConstant('{app}\doc'), True, True, True);
 
   end;
 end;
