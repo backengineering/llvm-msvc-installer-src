@@ -23,8 +23,6 @@
            switches the toolset to Clang, we will still treat the value as default (which for us is to
            not pass the option).  Only if the user explicitly overrode this setting in a project to use
            /RTCu would we see the warning. -->
-      <!-- Force define PSAPI_VERSION=1-->
-      <PreprocessorDefinitions>PSAPI_VERSION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <AdditionalOptions Condition="'$(Platform)' == 'Win32'">--target=i686-pc-windows-msvc $(ClangClAdditionalOptions) %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Platform)' == 'x64'">--target=x86_64-pc-windows-msvc $(ClangClAdditionalOptions) %(AdditionalOptions)</AdditionalOptions>
