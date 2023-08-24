@@ -14,7 +14,9 @@
     <UseClangCl>true</UseClangCl>
     <UseLldLink>true</UseLldLink>
 
-
+    <!-- What windows drivers need -->
+    <IncludePath>$(VC_IncludePath)</IncludePath>
+    
   </PropertyGroup>
 <Import Project="$(MSBuildThisFileDirectory)ImportAfter\*.props" Condition="Exists('$(MSBuildThisFileDirectory)ImportAfter')" />
 </Project>
