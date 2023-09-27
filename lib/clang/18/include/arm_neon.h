@@ -66601,6 +66601,27 @@ __ai __attribute__((target("v8.5a"))) float32x2_t vrnd32x_f32(float32x2_t __p0) 
 #endif
 
 #ifdef __LITTLE_ENDIAN__
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd32xq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  __ret = (float64x2_t) __builtin_neon_vrnd32xq_f64((int8x16_t)__p0, 42);
+  return __ret;
+}
+#else
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd32xq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  float64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
+  __ret = (float64x2_t) __builtin_neon_vrnd32xq_f64((int8x16_t)__rev0, 42);
+  __ret = __builtin_shufflevector(__ret, __ret, 1, 0);
+  return __ret;
+}
+#endif
+
+__ai __attribute__((target("v8.5a"))) float64x1_t vrnd32x_f64(float64x1_t __p0) {
+  float64x1_t __ret;
+  __ret = (float64x1_t) __builtin_neon_vrnd32x_f64((int8x8_t)__p0, 10);
+  return __ret;
+}
+#ifdef __LITTLE_ENDIAN__
 __ai __attribute__((target("v8.5a"))) float32x4_t vrnd32zq_f32(float32x4_t __p0) {
   float32x4_t __ret;
   __ret = (float32x4_t) __builtin_neon_vrnd32zq_f32((int8x16_t)__p0, 41);
@@ -66632,6 +66653,27 @@ __ai __attribute__((target("v8.5a"))) float32x2_t vrnd32z_f32(float32x2_t __p0) 
 }
 #endif
 
+#ifdef __LITTLE_ENDIAN__
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd32zq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  __ret = (float64x2_t) __builtin_neon_vrnd32zq_f64((int8x16_t)__p0, 42);
+  return __ret;
+}
+#else
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd32zq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  float64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
+  __ret = (float64x2_t) __builtin_neon_vrnd32zq_f64((int8x16_t)__rev0, 42);
+  __ret = __builtin_shufflevector(__ret, __ret, 1, 0);
+  return __ret;
+}
+#endif
+
+__ai __attribute__((target("v8.5a"))) float64x1_t vrnd32z_f64(float64x1_t __p0) {
+  float64x1_t __ret;
+  __ret = (float64x1_t) __builtin_neon_vrnd32z_f64((int8x8_t)__p0, 10);
+  return __ret;
+}
 #ifdef __LITTLE_ENDIAN__
 __ai __attribute__((target("v8.5a"))) float32x4_t vrnd64xq_f32(float32x4_t __p0) {
   float32x4_t __ret;
@@ -66665,6 +66707,27 @@ __ai __attribute__((target("v8.5a"))) float32x2_t vrnd64x_f32(float32x2_t __p0) 
 #endif
 
 #ifdef __LITTLE_ENDIAN__
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd64xq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  __ret = (float64x2_t) __builtin_neon_vrnd64xq_f64((int8x16_t)__p0, 42);
+  return __ret;
+}
+#else
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd64xq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  float64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
+  __ret = (float64x2_t) __builtin_neon_vrnd64xq_f64((int8x16_t)__rev0, 42);
+  __ret = __builtin_shufflevector(__ret, __ret, 1, 0);
+  return __ret;
+}
+#endif
+
+__ai __attribute__((target("v8.5a"))) float64x1_t vrnd64x_f64(float64x1_t __p0) {
+  float64x1_t __ret;
+  __ret = (float64x1_t) __builtin_neon_vrnd64x_f64((int8x8_t)__p0, 10);
+  return __ret;
+}
+#ifdef __LITTLE_ENDIAN__
 __ai __attribute__((target("v8.5a"))) float32x4_t vrnd64zq_f32(float32x4_t __p0) {
   float32x4_t __ret;
   __ret = (float32x4_t) __builtin_neon_vrnd64zq_f32((int8x16_t)__p0, 41);
@@ -66696,6 +66759,27 @@ __ai __attribute__((target("v8.5a"))) float32x2_t vrnd64z_f32(float32x2_t __p0) 
 }
 #endif
 
+#ifdef __LITTLE_ENDIAN__
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd64zq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  __ret = (float64x2_t) __builtin_neon_vrnd64zq_f64((int8x16_t)__p0, 42);
+  return __ret;
+}
+#else
+__ai __attribute__((target("v8.5a"))) float64x2_t vrnd64zq_f64(float64x2_t __p0) {
+  float64x2_t __ret;
+  float64x2_t __rev0;  __rev0 = __builtin_shufflevector(__p0, __p0, 1, 0);
+  __ret = (float64x2_t) __builtin_neon_vrnd64zq_f64((int8x16_t)__rev0, 42);
+  __ret = __builtin_shufflevector(__ret, __ret, 1, 0);
+  return __ret;
+}
+#endif
+
+__ai __attribute__((target("v8.5a"))) float64x1_t vrnd64z_f64(float64x1_t __p0) {
+  float64x1_t __ret;
+  __ret = (float64x1_t) __builtin_neon_vrnd64z_f64((int8x8_t)__p0, 10);
+  return __ret;
+}
 #endif
 #if defined(__aarch64__) && defined(__ARM_FEATURE_DIRECTED_ROUNDING)
 #ifdef __LITTLE_ENDIAN__
