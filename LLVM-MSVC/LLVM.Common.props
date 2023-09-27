@@ -6,14 +6,16 @@
     <LLVMInstallDir Condition="'$(LLVMInstallDir)' != ''">$(LLVMInstallDir)\</LLVMInstallDir>
     <ClangClExecutable>$(LLVMInstallDir)bin\clang-cl.exe</ClangClExecutable>
     <LldLinkExecutable>$(LLVMInstallDir)bin\lld-link.exe</LldLinkExecutable>
-
+    <LlvmLibExecutable>$(LLVMInstallDir)\bin\llvm-lib.exe</LlvmLibExecutable>
+    
     <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
     <!-- Disable clang-tidy -->
     <EnableClangTidyCodeAnalysis>false</EnableClangTidyCodeAnalysis>
     
     <UseClangCl>true</UseClangCl>
     <UseLldLink>true</UseLldLink>
-
+    <UseLlvmLib>true</UseLlvmLib>
+    
     <!-- What windows drivers need -->
     <IncludePath>$(VC_IncludePath)</IncludePath>
     

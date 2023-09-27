@@ -7,8 +7,8 @@
          before the targets file but after the props file) and we need the path
          that the user may have overridden in the UI. -->
     <CLToolExe Condition="$(UseClangCl)">$(ClangClExecutable)</CLToolExe>
-    <LinkToolExe Condition="'$(Platform)' == 'Win32'">$(LldLinkExecutable)</LinkToolExe>
-    <LinkToolExe Condition="'$(Platform)' == 'x64'">$(LldLinkExecutable)</LinkToolExe>
+    <LinkToolExe Condition="$(UseLldLink)">$(LldLinkExecutable)</LinkToolExe>
+    <LIBToolExe Condition="$(UseLlvmLib)">$(LlvmLibExecutable)</LIBToolExe>
 
   </PropertyGroup>
     
@@ -40,6 +40,13 @@
     </Link>
   </ItemDefinitionGroup>
 
+  <ItemDefinitionGroup Condition="$(UseLlvmLib)">
+    <Lib>
+      <!-- <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration> -->
+      <AdditionalOptions>$(LlvmLibAdditionalOptions) %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  
  
   <!-- We hook up a target to run every time ClCompile is about to run, the
        purpose of which is to sanitize the command line before it gets passed to
