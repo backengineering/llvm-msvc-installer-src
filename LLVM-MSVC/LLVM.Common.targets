@@ -111,7 +111,6 @@
              Generally when an option is set to no value, that means "Don't pass an option to the
              compiler at all."
              -->
-        <WholeProgramOptimization/>
         <EnableFiberSafeOptimizations/>
         <IgnoreStandardIncludePath/>
         <EnableParallelCodeGeneration/>
