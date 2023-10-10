@@ -15,6 +15,7 @@ DisableReadyPage=no
 DisableReadyMemo=no
 DisableStartupPrompt=yes
 DisableFinishedPage=yes
+DisableDirPage=no
 Uninstallable=yes
 OutputDir=Output\
 OutputBaseFilename=llvm-msvc_X86_64_installer
