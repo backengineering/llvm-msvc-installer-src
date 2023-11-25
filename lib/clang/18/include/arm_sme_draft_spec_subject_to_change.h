@@ -573,14 +573,54 @@ __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svwrite_ver_za8_u8_
 void svwrite_ver_za8_m(uint64_t, uint32_t, svbool_t, svuint8_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svwrite_ver_za8_s8_m), arm_streaming, arm_shared_za))
 void svwrite_ver_za8_m(uint64_t, uint32_t, svbool_t, svint8_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_f64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_f64_vg1x2(uint32_t, svfloat64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_f64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_f64_vg1x4(uint32_t, svfloat64x4_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmopa_za64_f64_m), arm_streaming, arm_shared_za))
 void svmopa_za64_f64_m(uint64_t, svbool_t, svbool_t, svfloat64_t, svfloat64_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_f64_m), arm_streaming, arm_shared_za))
 void svmops_za64_f64_m(uint64_t, svbool_t, svbool_t, svfloat64_t, svfloat64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_f64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_f64_vg1x2(uint32_t, svfloat64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_f64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_f64_vg1x4(uint32_t, svfloat64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_f64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x2(uint32_t, svfloat64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_f64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x4(uint32_t, svfloat64x4_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmopa_za64_f64_m), arm_streaming, arm_shared_za))
 void svmopa_za64_m(uint64_t, svbool_t, svbool_t, svfloat64_t, svfloat64_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_f64_m), arm_streaming, arm_shared_za))
 void svmops_za64_m(uint64_t, svbool_t, svbool_t, svfloat64_t, svfloat64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_f64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x2(uint32_t, svfloat64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_f64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x4(uint32_t, svfloat64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_single_za64_u64_vg1x2(uint32_t, svuint64x2_t, svuint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_single_za64_s64_vg1x2(uint32_t, svint64x2_t, svint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_single_za64_u64_vg1x4(uint32_t, svuint64x4_t, svuint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_single_za64_s64_vg1x4(uint32_t, svint64x4_t, svint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_u64_vg1x2(uint32_t, svuint64x2_t, svuint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_s64_vg1x2(uint32_t, svint64x2_t, svint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_u64_vg1x4(uint32_t, svuint64x4_t, svuint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_s64_vg1x4(uint32_t, svint64x4_t, svint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_u64_vg1x2(uint32_t, svuint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_s64_vg1x2(uint32_t, svint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_u64_vg1x4(uint32_t, svuint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_s64_vg1x4(uint32_t, svint64x4_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svaddha_za64_u64_m), arm_streaming, arm_shared_za))
 void svaddha_za64_u64_m(uint64_t, svbool_t, svbool_t, svuint64_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svaddha_za64_s64_m), arm_streaming, arm_shared_za))
@@ -597,6 +637,30 @@ __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_s16_m), 
 void svmops_za64_s16_m(uint64_t, svbool_t, svbool_t, svint16_t, svint16_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_u16_m), arm_streaming, arm_shared_za))
 void svmops_za64_u16_m(uint64_t, svbool_t, svbool_t, svuint16_t, svuint16_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_single_za64_u64_vg1x2(uint32_t, svuint64x2_t, svuint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_single_za64_s64_vg1x2(uint32_t, svint64x2_t, svint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_single_za64_u64_vg1x4(uint32_t, svuint64x4_t, svuint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_single_za64_s64_vg1x4(uint32_t, svint64x4_t, svint64_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_u64_vg1x2(uint32_t, svuint64x2_t, svuint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_s64_vg1x2(uint32_t, svint64x2_t, svint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_u64_vg1x4(uint32_t, svuint64x4_t, svuint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_s64_vg1x4(uint32_t, svint64x4_t, svint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_u64_vg1x2(uint32_t, svuint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_s64_vg1x2(uint32_t, svint64x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_u64_vg1x4(uint32_t, svuint64x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_s64_vg1x4(uint32_t, svint64x4_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsumopa_za64_s16_m), arm_streaming, arm_shared_za))
 void svsumopa_za64_s16_m(uint64_t, svbool_t, svbool_t, svint16_t, svuint16_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsumops_za64_s16_m), arm_streaming, arm_shared_za))
@@ -605,6 +669,30 @@ __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svusmopa_za64_u16_m)
 void svusmopa_za64_u16_m(uint64_t, svbool_t, svbool_t, svuint16_t, svint16_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svusmops_za64_u16_m), arm_streaming, arm_shared_za))
 void svusmops_za64_u16_m(uint64_t, svbool_t, svbool_t, svuint16_t, svint16_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x2(uint32_t, svuint64x2_t, svuint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x2(uint32_t, svint64x2_t, svint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x4(uint32_t, svuint64x4_t, svuint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x4(uint32_t, svint64x4_t, svint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x2(uint32_t, svuint64x2_t, svuint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x2(uint32_t, svint64x2_t, svint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x4(uint32_t, svuint64x4_t, svuint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za64_vg1x4(uint32_t, svint64x4_t, svint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x2(uint32_t, svuint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x2(uint32_t, svint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x4(uint32_t, svuint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za64_vg1x4(uint32_t, svint64x4_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svaddha_za64_u64_m), arm_streaming, arm_shared_za))
 void svaddha_za64_m(uint64_t, svbool_t, svbool_t, svuint64_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svaddha_za64_s64_m), arm_streaming, arm_shared_za))
@@ -621,6 +709,30 @@ __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_s16_m),
 void svmops_za64_m(uint64_t, svbool_t, svbool_t, svint16_t, svint16_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svmops_za64_u16_m), arm_streaming, arm_shared_za))
 void svmops_za64_m(uint64_t, svbool_t, svbool_t, svuint16_t, svuint16_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x2(uint32_t, svuint64x2_t, svuint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x2(uint32_t, svint64x2_t, svint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x4(uint32_t, svuint64x4_t, svuint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x4(uint32_t, svint64x4_t, svint64_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x2(uint32_t, svuint64x2_t, svuint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x2(uint32_t, svint64x2_t, svint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x4(uint32_t, svuint64x4_t, svuint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za64_vg1x4(uint32_t, svint64x4_t, svint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_u64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x2(uint32_t, svuint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_s64_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x2(uint32_t, svint64x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_u64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x4(uint32_t, svuint64x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za64_s64_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za64_vg1x4(uint32_t, svint64x4_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsumopa_za64_s16_m), arm_streaming, arm_shared_za))
 void svsumopa_za64_m(uint64_t, svbool_t, svbool_t, svint16_t, svuint16_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsumops_za64_s16_m), arm_streaming, arm_shared_za))
@@ -629,12 +741,124 @@ __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svusmopa_za64_u16_m
 void svusmopa_za64_m(uint64_t, svbool_t, svbool_t, svuint16_t, svint16_t);
 __aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svusmops_za64_u16_m), arm_streaming, arm_shared_za))
 void svusmops_za64_m(uint64_t, svbool_t, svbool_t, svuint16_t, svint16_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_single_za32_u32_vg1x2(uint32_t, svuint32x2_t, svuint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_single_za32_s32_vg1x2(uint32_t, svint32x2_t, svint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_single_za32_u32_vg1x4(uint32_t, svuint32x4_t, svuint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_single_za32_s32_vg1x4(uint32_t, svint32x4_t, svint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_u32_vg1x2(uint32_t, svuint32x2_t, svuint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_s32_vg1x2(uint32_t, svint32x2_t, svint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_u32_vg1x4(uint32_t, svuint32x4_t, svuint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_s32_vg1x4(uint32_t, svint32x4_t, svint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_u32_vg1x2(uint32_t, svuint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_f32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_f32_vg1x2(uint32_t, svfloat32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_s32_vg1x2(uint32_t, svint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_u32_vg1x4(uint32_t, svuint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_f32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_f32_vg1x4(uint32_t, svfloat32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_s32_vg1x4(uint32_t, svint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_single_za32_u32_vg1x2(uint32_t, svuint32x2_t, svuint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_single_za32_s32_vg1x2(uint32_t, svint32x2_t, svint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_single_za32_u32_vg1x4(uint32_t, svuint32x4_t, svuint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_single_za32_s32_vg1x4(uint32_t, svint32x4_t, svint32_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_u32_vg1x2(uint32_t, svuint32x2_t, svuint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_s32_vg1x2(uint32_t, svint32x2_t, svint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_u32_vg1x4(uint32_t, svuint32x4_t, svuint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_s32_vg1x4(uint32_t, svint32x4_t, svint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_u32_vg1x2(uint32_t, svuint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_f32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_f32_vg1x2(uint32_t, svfloat32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_s32_vg1x2(uint32_t, svint32x2_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_u32_vg1x4(uint32_t, svuint32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_f32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_f32_vg1x4(uint32_t, svfloat32x4_t);
+__ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_s32_vg1x4(uint32_t, svint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x2(uint32_t, svuint32x2_t, svuint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x2(uint32_t, svint32x2_t, svint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x4(uint32_t, svuint32x4_t, svuint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_single_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x4(uint32_t, svint32x4_t, svint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x2(uint32_t, svuint32x2_t, svuint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x2(uint32_t, svint32x2_t, svint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x4(uint32_t, svuint32x4_t, svuint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_write_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_write_za32_vg1x4(uint32_t, svint32x4_t, svint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x2(uint32_t, svuint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_f32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x2(uint32_t, svfloat32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x2(uint32_t, svint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x4(uint32_t, svuint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_f32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x4(uint32_t, svfloat32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svadd_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svadd_za32_vg1x4(uint32_t, svint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x2(uint32_t, svuint32x2_t, svuint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x2(uint32_t, svint32x2_t, svint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x4(uint32_t, svuint32x4_t, svuint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_single_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x4(uint32_t, svint32x4_t, svint32_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x2(uint32_t, svuint32x2_t, svuint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x2(uint32_t, svint32x2_t, svint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x4(uint32_t, svuint32x4_t, svuint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_write_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_write_za32_vg1x4(uint32_t, svint32x4_t, svint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_u32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x2(uint32_t, svuint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_f32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x2(uint32_t, svfloat32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_s32_vg1x2), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x2(uint32_t, svint32x2_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_u32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x4(uint32_t, svuint32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_f32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x4(uint32_t, svfloat32x4_t);
+__aio __attribute__((__clang_arm_builtin_alias(__builtin_sme_svsub_za32_s32_vg1x4), arm_streaming, arm_shared_za))
+void svsub_za32_vg1x4(uint32_t, svint32x4_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svldr_vnum_za), arm_streaming_compatible, arm_shared_za))
-void svldr_vnum_za(uint32_t, void const *, uint64_t);
+void svldr_vnum_za(uint32_t, void const *, int64_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svldr_za), arm_streaming_compatible, arm_shared_za))
 void svldr_za(uint32_t, void const *);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svstr_vnum_za), arm_streaming_compatible, arm_shared_za, arm_preserves_za))
-void svstr_vnum_za(uint32_t, void *, uint64_t);
+void svstr_vnum_za(uint32_t, void *, int64_t);
 __ai __attribute__((__clang_arm_builtin_alias(__builtin_sme_svstr_za), arm_streaming_compatible, arm_shared_za, arm_preserves_za))
 void svstr_za(uint32_t, void *);
 #ifdef __cplusplus
